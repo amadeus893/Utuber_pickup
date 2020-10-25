@@ -10,7 +10,6 @@ RUN mkdir /code
 WORKDIR /code
 # requirements.txtを/codeに追加する
 ADD requirements.txt /code/
-#COPY requirements.txt ./
 # Pythonのパッケージ管理ツールのpipをアップグレード
 RUN pip install --upgrade pip
 # pipでrequirements.txtに指定されているパッケージを追加する
