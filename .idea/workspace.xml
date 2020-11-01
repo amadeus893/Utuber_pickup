@@ -25,20 +25,9 @@
     <list default="true" id="588e5ead-0045-4ec3-9c88-151b4b17f87c" name="Default Changelist" comment="configフォルダ追加">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UtuberPickup/apps/myrestapi/management/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/db/master_init_data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UtuberPickup/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/UtuberPickup/apps/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UtuberPickup/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UtuberPickup/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UtuberPickup/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UtuberPickup/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UtuberPickup/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/UtuberPickup/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UtuberPickup/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +140,7 @@
       <updated>1603623903453</updated>
       <workItem from="1603623905676" duration="12590000" />
       <workItem from="1604115681706" duration="8792000" />
-      <workItem from="1604128146595" duration="19159000" />
+      <workItem from="1604128146595" duration="21981000" />
     </task>
     <task id="LOCAL-00001" summary="初回コミット">
       <created>1603624090642</created>
@@ -174,7 +163,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604114830976</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ローカルでの動作確認完了">
+      <created>1604228043182</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604228043183</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Dockerfile修正">
+      <created>1604230078177</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604230078177</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +198,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初回コミット" />
     <MESSAGE value="コメント行削除" />
-    <option name="LAST_COMMIT_MESSAGE" value="コメント行削除" />
+    <MESSAGE value="ローカルでの動作確認完了" />
+    <MESSAGE value="Dockerfile修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dockerfile修正" />
   </component>
   <component name="WindowStateProjectService">
     <state x="514" y="217" key="#Docker_Registry" timestamp="1603632473019">
@@ -206,10 +211,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="514" y="217" key="#Docker_Registry2/0.0.1366.768@0.0.1366.768" timestamp="1603633451380" />
-    <state x="480" y="286" key="#Push_Image" timestamp="1603634308926">
+    <state x="480" y="286" key="#Push_Image" timestamp="1604231151786">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="480" y="286" key="#Push_Image/0.0.1366.768@0.0.1366.768" timestamp="1603634308926" />
+    <state x="480" y="286" key="#Push_Image/0.0.1366.768@0.0.1366.768" timestamp="1604231151786" />
     <state x="147" y="44" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604199894838">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -248,22 +253,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="545" y="288" key="Github.ShareDialog/0.0.1366.768@0.0.1366.768" timestamp="1603626977542" />
-    <state width="874" height="199" key="GridCell.Tab.0.bottom" timestamp="1604226339938">
+    <state width="1324" height="261" key="GridCell.Tab.0.bottom" timestamp="1604231563344">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="874" height="199" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1604226339938" />
-    <state width="874" height="199" key="GridCell.Tab.0.center" timestamp="1604226339935">
+    <state width="1324" height="261" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1604231563344" />
+    <state width="1324" height="261" key="GridCell.Tab.0.center" timestamp="1604231563341">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="874" height="199" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1604226339935" />
-    <state width="874" height="199" key="GridCell.Tab.0.left" timestamp="1604226339933">
+    <state width="1324" height="261" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1604231563341" />
+    <state width="1324" height="261" key="GridCell.Tab.0.left" timestamp="1604231563338">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="874" height="199" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1604226339933" />
-    <state width="874" height="199" key="GridCell.Tab.0.right" timestamp="1604226339936">
+    <state width="1324" height="261" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1604231563338" />
+    <state width="1324" height="261" key="GridCell.Tab.0.right" timestamp="1604231563342">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="874" height="199" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1604226339936" />
+    <state width="1324" height="261" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1604231563342" />
     <state width="1324" height="380" key="GridCell.Tab.1.bottom" timestamp="1604201672820">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -292,10 +297,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="109" y="24" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1604128292182" />
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1604115237973">
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1604230080261">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1604115237973" />
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1604230080261" />
     <state width="683" height="396" key="XDebugger.FullValuePopup" timestamp="1604116493041">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

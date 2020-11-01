@@ -9,7 +9,7 @@ RUN mkdir /code
 # 作業ディレクトリの設定
 WORKDIR /code
 # requirements.txtを/codeに追加する
-ADD ./UtuberPickup/requirements.txt /code/
+ADD requirements.txt /code/
 # Pythonのパッケージ管理ツールのpipをアップグレード
 RUN pip install --upgrade pip
 # pipでrequirements.txtに指定されているパッケージを追加する
