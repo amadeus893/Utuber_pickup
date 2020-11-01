@@ -9,10 +9,12 @@ RUN mkdir /code
 # 作業ディレクトリの設定
 WORKDIR /code
 # requirements.txtを/codeに追加する
-ADD requirements.txt /code/
+ADD UtuberPickup/requirements.txt /code/
 # Pythonのパッケージ管理ツールのpipをアップグレード
 RUN pip install --upgrade pip
 # pipでrequirements.txtに指定されているパッケージを追加する
 RUN pip install -r requirements.txt
 # ローカルのディレクトリを/codeに追加する
-ADD . /code
+ADD UtuberPickup /code
+# entrypoint.shを実行
+ENTRYPOINT ["./entrypoint.sh"]

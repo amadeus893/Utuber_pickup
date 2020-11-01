@@ -1,0 +1,137 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    /*background-image: url("../../static/img/background.jpg");*/
+    /*background-repeat: repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-position: right bottom*/
+    /*text-align: center;*/
+    /*font-family: "メイリオ" ;*/
+}
+header {
+    z-index: 9999;
+    padding: 30px 4% 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #00cfff;
+    background-image: url("../../static/img/header_img2.jpg");
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+h1 {
+    width: 100%;
+    margin-left: 30%;
+    margin-top: auto;
+    font-size: 15px;
+}
+a {
+   text-decoration: none;
+   color: #4b4b4b;
+}
+nav {
+   margin: 0 0 0 auto;
+}
+.header-ul {
+   list-style: none;
+   display: flex;
+}
+.header-list {
+   margin: 0 0 0 15px;
+   font-size: 14px;
+}
+.header-lbl-ul {
+    list-style: none;
+}
+.header-lbl-ul li{
+    margin-left: 20px;
+    float: left;
+}
+.li-1{
+    width:200px;
+}
+#selbx-vtuber-name {
+    height:40px;
+    width:200px;
+}
+#btn-search {
+    background-image: url("../../static/img/search_img.png");
+    background-repeat: no-repeat;
+    margin: 20px 0px 0px -40px;
+    height:40px;
+    width:45px;
+    background-size:contain;
+    border-radius:5px;
+    border: none;  /* 枠線を消す */
+    outline: none; /* クリックしたときに表示される枠線を消す */
+    background-color: transparent;
+}
+.photo-frame {
+    text-align:center;
+    position: relative;
+    width: 700px;
+    margin: 60px auto auto auto;
+    background-color: #F6F6F6;
+}
+.rank {
+    overflow: hidden;
+    position: absolute;
+    top: -15px;
+    background-image: url("../../static/img/rank_lbl.png");
+    background-repeat: no-repeat;
+    width:100px;
+    height:130px;
+    /*width:120px;*/
+    /*height:155px;*/
+    background-size:cover;
+}
+.rank-num {
+    position: absolute;
+    top: 46px;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 2.0em;
+}
+.time{
+    background-image: url("../../static/img/time_img.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: absolute;
+    top: 45px;
+    left: 170px;
+    height:50px;
+    width:50px;
+}
+.lbl-time {
+    position: absolute;
+    left: 60px;
+    color: black;
+    font-weight: bold;
+    font-size: 2.5em;
+    white-space: nowrap;
+}
+.photo {
+    overflow: hidden;
+    position: absolute;
+    top: 130px;
+    left: 30px;
+}
+.swiper-container {
+    position: relative;
+    top:70px;
+    list-style: none;
+    margin-bottom: 35px;
+}
+.swiper-button-prev {
+    position: fixed;
+    vertical-align: top;
+}
+.swiper-button-next {
+    position: fixed;
+    vertical-align: top;
+}

@@ -1,0 +1,94 @@
+{% load static %}
+<html lang="jp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+        <!--css    -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/spinner.css' %}">
+        <link rel="stylesheet" href="{% static 'css/table.css' %}">
+
+        <!--js       -->
+        <script type="text/javascript" src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{% static 'js/clip_video.js' %}"></script>
+    </head>
+
+    <body>
+
+        <form id="clip_execute" action="{% url 'execute' %}" method="post">
+            {% csrf_token %}
+            <center>
+                URLを入力してください。
+                <div class="URLFrame">
+                    <input type="url" id="target_url" class="inputBox">
+                    <div class="clearButton" onclick="clearButton()"></div>
+                </div>
+                <input type="submit" value="実行">
+            </center>
+        </form>
+
+        <table id="WholeTable" class="WholeTable" align="center">
+            <tr>
+                <td align="center">
+                    <div id="player_0"></div><br>
+                        <label>
+                            <span id="player_lbl_0"></span>
+                        </label>
+                    <br>
+                    <div id="player_1"></div><br>
+                        <label>
+                            <span id="player_lbl_1"></span>
+                        </label>
+                    <br>
+                    <div id="player_2"></div><br>
+                        <label>
+                            <span id="player_lbl_2"></span>
+                        </label>
+                    <br>
+                    <div id="player_3"></div><br>
+                        <label>
+                            <span id="player_lbl_3"></span>
+                        </label>
+                    <br>
+                    <div id="player_4"></div><br>
+                        <label>
+                            <span id="player_lbl_4"></span>
+                        </label>
+                    <br>
+                    <div id="player_5"></div><br>
+                        <label>
+                            <span id="player_lbl_5"></span>
+                        </label>
+                    <br>
+                    <div id="player_6"></div><br>
+                        <label>
+                            <span id="player_lbl_6"></span>
+                        </label>
+                    <br>
+                    <div id="player_7"></div><br>
+                        <label>
+                            <span id="player_lbl_7"></span>
+                        </label>
+                    <br>
+                    <div id="player_8"></div><br>
+                        <label>
+                            <span id="player_lbl_8"></span>
+                        </label>
+                    <br>
+                    <div id="player_9"></div><br>
+                        <label>
+                            <span id="player_lbl_9"></span>
+                        </label>
+                    <br>
+                </td>
+                <td valign ="top" align="right">
+                    <table id="moderator_chat_list" class="ProductTable">
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+.WholeTable {
+    border-collapse: separate;
+    border-spacing: 20px 0px;
+}
+
+.ProductTable {
+    border-collapse: separate;
+    border-spacing: 8px 0px;
+}
+
+.URLFrame{
+  position: relative;
+  display: inline-block;
+}
+
+.InputBox{
+  padding-right: 20px;
+  width:360px;
+}
+
+.URLFrame .clearButton{
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: url("../img/close_button.png") no-repeat left center;
+  cursor: pointer;
+}

@@ -1,8 +1,360 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="588e5ead-0045-4ec3-9c88-151b4b17f87c" name="Default Changelist" comment="configフォルダ追加">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UtuberPickup/apps/myrestapi/management/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/db/master_init_data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginx/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UtuberPickup/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/UtuberPickup/apps/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UtuberPickup/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UtuberPickup/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UtuberPickup/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UtuberPickup/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/amadeus893/Utuber_pickup" />
+      </set>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="a63a11b6-91d1-46ec-bb2e-a09a46a7ac73" />
+  <component name="ProjectId" id="1jMpd6YYlehf0tEjK3Goz4Z6iaB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.data.extractors.current.export.id" value="SQL-Insert-Statements.sql.groovy" />
+    <property name="database.data.extractors.current.id" value="SQL-Insert-Statements.sql.groovy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/" />
+      <recent name="$PROJECT_DIR$/UtuberPickup/apps" />
+      <recent name="$PROJECT_DIR$/UtuberPickup" />
+      <recent name="$PROJECT_DIR$/../UtuberPickup" />
+      <recent name="$PROJECT_DIR$/UtuberPickup/config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django Server.UtuberPickup">
+    <configuration name="UtuberPickup" type="Python.DjangoServer" factoryName="Django server">
+      <module name="UtuberPickup" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="config.settings" />
+      </envs>
+      <option name="SDK_HOME" value="docker-compose://[$PROJECT_DIR$/docker-compose.yml]:web/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/UtuberPickup" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="DockerComposeSettingsRunConfigurationExtension" commandLine="up -build" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="0.0.0.0" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django Server.UtuberPickup" />
+      <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="588e5ead-0045-4ec3-9c88-151b4b17f87c" name="Default Changelist" comment="" />
+      <created>1603623903453</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603623903453</updated>
+      <workItem from="1603623905676" duration="12590000" />
+      <workItem from="1604115681706" duration="8792000" />
+      <workItem from="1604128146595" duration="19159000" />
+    </task>
+    <task id="LOCAL-00001" summary="初回コミット">
+      <created>1603624090642</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603624090642</updated>
+    </task>
+    <task id="LOCAL-00002" summary="コメント行削除">
+      <created>1603629939244</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603629939249</updated>
+    </task>
+    <task id="LOCAL-00003" summary="コメント行削除">
+      <created>1604114830975</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604114830976</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初回コミット" />
+    <MESSAGE value="コメント行削除" />
+    <option name="LAST_COMMIT_MESSAGE" value="コメント行削除" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="514" y="217" key="#Docker_Registry" timestamp="1603632473019">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="514" y="217" key="#Docker_Registry/0.0.1366.768@0.0.1366.768" timestamp="1603632473019" />
+    <state x="514" y="217" key="#Docker_Registry2" timestamp="1603633451380">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="514" y="217" key="#Docker_Registry2/0.0.1366.768@0.0.1366.768" timestamp="1603633451380" />
+    <state x="480" y="286" key="#Push_Image" timestamp="1603634308926">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="480" y="286" key="#Push_Image/0.0.1366.768@0.0.1366.768" timestamp="1603634308926" />
+    <state x="147" y="44" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604199894838">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="147" y="44" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1604199894838" />
+    <state x="418" y="193" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604127073086">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="418" y="193" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1604127073086" />
+    <state x="344" y="104" key="#xdebugger.evaluate" timestamp="1604117019378">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="344" y="104" key="#xdebugger.evaluate/0.0.1366.768@0.0.1366.768" timestamp="1604117019378" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1604195117566">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1366.768@0.0.1366.768" timestamp="1604195117566" />
+    <state width="1366" height="452" key="DebuggerActiveHint" timestamp="1604116493051">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1366" height="452" key="DebuggerActiveHint/0.0.1366.768@0.0.1366.768" timestamp="1604116493051" />
+    <state width="1366" height="438" key="DebuggerActiveHint/0.23.1366.745@0.23.1366.745" timestamp="1604116188479" />
+    <state x="100" y="100" width="1166" height="568" key="DiffContextDialog" timestamp="1604115272779">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state x="100" y="100" width="1166" height="568" key="DiffContextDialog/0.0.1366.768@0.0.1366.768" timestamp="1604115265457" />
+    <state x="100" y="100" width="1166" height="568" key="DiffContextDialog/0.23.1366.745@0.23.1366.745" timestamp="1604115272779" />
+    <state x="323" y="251" key="DockerComposeFileDialog" timestamp="1603624818194">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="323" y="251" key="DockerComposeFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1603624818194" />
+    <state x="405" y="116" key="EnvironmentVariablesDialog" timestamp="1603624809307">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="405" y="116" key="EnvironmentVariablesDialog/0.0.1366.768@0.0.1366.768" timestamp="1603624809307" />
+    <state x="545" y="288" key="Github.ShareDialog" timestamp="1603626977542">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="545" y="288" key="Github.ShareDialog/0.0.1366.768@0.0.1366.768" timestamp="1603626977542" />
+    <state width="874" height="199" key="GridCell.Tab.0.bottom" timestamp="1604226339938">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="874" height="199" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1604226339938" />
+    <state width="874" height="199" key="GridCell.Tab.0.center" timestamp="1604226339935">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="874" height="199" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1604226339935" />
+    <state width="874" height="199" key="GridCell.Tab.0.left" timestamp="1604226339933">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="874" height="199" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1604226339933" />
+    <state width="874" height="199" key="GridCell.Tab.0.right" timestamp="1604226339936">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="874" height="199" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1604226339936" />
+    <state width="1324" height="380" key="GridCell.Tab.1.bottom" timestamp="1604201672820">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="380" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1604201672820" />
+    <state width="1324" height="312" key="GridCell.Tab.1.bottom/0.23.1366.745@0.23.1366.745" timestamp="1604197339740" />
+    <state width="1324" height="380" key="GridCell.Tab.1.center" timestamp="1604201672818">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="380" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1604201672818" />
+    <state width="1324" height="312" key="GridCell.Tab.1.center/0.23.1366.745@0.23.1366.745" timestamp="1604197339739" />
+    <state width="1324" height="380" key="GridCell.Tab.1.left" timestamp="1604201672818">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="380" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1604201672818" />
+    <state width="1324" height="312" key="GridCell.Tab.1.left/0.23.1366.745@0.23.1366.745" timestamp="1604197339737" />
+    <state width="1324" height="380" key="GridCell.Tab.1.right" timestamp="1604201672819">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="380" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1604201672819" />
+    <state width="1324" height="312" key="GridCell.Tab.1.right/0.23.1366.745@0.23.1366.745" timestamp="1604197339740" />
+    <state x="447" y="111" key="RollbackChangesDialog" timestamp="1604115095590">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="447" y="111" key="RollbackChangesDialog/0.0.1366.768@0.0.1366.768" timestamp="1604115095590" />
+    <state x="109" y="24" key="SettingsEditor" timestamp="1604128292182">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="109" y="24" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1604128292182" />
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1604115237973">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1604115237973" />
+    <state width="683" height="396" key="XDebugger.FullValuePopup" timestamp="1604116493041">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="683" height="396" key="XDebugger.FullValuePopup/0.0.1366.768@0.0.1366.768" timestamp="1604116493041" />
+    <state width="683" height="384" key="XDebugger.FullValuePopup/0.23.1366.745@0.23.1366.745" timestamp="1604116188435" />
+    <state x="582" y="251" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1603812265299">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="582" y="251" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1366.768@0.0.1366.768" timestamp="1603812265299" />
+    <state x="582" y="278" width="359" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1603813900799">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="582" y="278" width="359" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.768@0.0.1366.768" timestamp="1603813900799" />
+    <state x="271" y="46" key="com.intellij.database.dbimport.ImportDialog" timestamp="1604225856876">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="271" y="46" key="com.intellij.database.dbimport.ImportDialog/0.0.1366.768@0.0.1366.768" timestamp="1604225856876" />
+    <state x="545" y="59" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1603813786417">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="545" y="59" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.768@0.0.1366.768" timestamp="1603813786417" />
+    <state x="214" y="120" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1604198567155">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="214" y="120" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.768@0.0.1366.768" timestamp="1604198567155" />
+    <state x="348" y="92" width="670" height="676" key="search.everywhere.popup" timestamp="1604113691450">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="348" y="92" width="670" height="676" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1604113691450" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$USER_HOME$/Library/Caches/JetBrains/PyCharm2020.2/remote_sources/-265873962/1170049292/django/contrib/admin/static/admin/js/vendor/select2/select2.full.js</url>
+          <line>6372</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///usr/local/lib/python3.7/site-packages/django/conf/__init__.py</url>
+          <line>141</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///usr/local/lib/python3.7/site-packages/django/conf/__init__.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///usr/local/lib/python3.7/site-packages/django/conf/__init__.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/UtuberPickup/apps/myrestapi/views/views.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
