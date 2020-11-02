@@ -19,15 +19,27 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="588e5ead-0045-4ec3-9c88-151b4b17f87c" name="Default Changelist" comment="configフォルダ追加">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginx_prod/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginx_prod/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UtuberPickup/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/UtuberPickup/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UtuberPickup/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UtuberPickup/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/UtuberPickup/entrypoint.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/master_init_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/nginx_dev/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx_dev/nginx.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,16 +75,20 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.data.extractors.current.export.id" value="SQL-Insert-Statements.sql.groovy" />
+    <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
     <property name="database.data.extractors.current.id" value="SQL-Insert-Statements.sql.groovy" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$/UtuberPickup/apps" />
@@ -81,7 +97,7 @@
       <recent name="$PROJECT_DIR$/UtuberPickup/config" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.UtuberPickup">
+  <component name="RunManager" selected="Docker.docker-compose.yml.db: Compose Deployment">
     <configuration name="UtuberPickup" type="Python.DjangoServer" factoryName="Django server">
       <module name="UtuberPickup" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -140,7 +156,7 @@
       <updated>1603623903453</updated>
       <workItem from="1603623905676" duration="12590000" />
       <workItem from="1604115681706" duration="8792000" />
-      <workItem from="1604128146595" duration="21981000" />
+      <workItem from="1604128146595" duration="29799000" />
     </task>
     <task id="LOCAL-00001" summary="初回コミット">
       <created>1603624090642</created>
@@ -177,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604230078177</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="requirements.txtをリファクタリング">
+      <created>1604231935565</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604231935566</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +211,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -200,9 +235,14 @@
     <MESSAGE value="コメント行削除" />
     <MESSAGE value="ローカルでの動作確認完了" />
     <MESSAGE value="Dockerfile修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dockerfile修正" />
+    <MESSAGE value="requirements.txtをリファクタリング" />
+    <option name="LAST_COMMIT_MESSAGE" value="requirements.txtをリファクタリング" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="283" y="49" key="#Deployment" timestamp="1604308190021">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="283" y="49" key="#Deployment/0.0.1366.768@0.0.1366.768" timestamp="1604308190021" />
     <state x="514" y="217" key="#Docker_Registry" timestamp="1603632473019">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -253,22 +293,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="545" y="288" key="Github.ShareDialog/0.0.1366.768@0.0.1366.768" timestamp="1603626977542" />
-    <state width="1324" height="261" key="GridCell.Tab.0.bottom" timestamp="1604231563344">
+    <state width="1324" height="387" key="GridCell.Tab.0.bottom" timestamp="1604309458573">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="261" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1604231563344" />
-    <state width="1324" height="261" key="GridCell.Tab.0.center" timestamp="1604231563341">
+    <state width="1324" height="387" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1604309458573" />
+    <state width="1324" height="387" key="GridCell.Tab.0.center" timestamp="1604309458571">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="261" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1604231563341" />
-    <state width="1324" height="261" key="GridCell.Tab.0.left" timestamp="1604231563338">
+    <state width="1324" height="387" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1604309458571" />
+    <state width="1324" height="387" key="GridCell.Tab.0.left" timestamp="1604309458569">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="261" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1604231563338" />
-    <state width="1324" height="261" key="GridCell.Tab.0.right" timestamp="1604231563342">
+    <state width="1324" height="387" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1604309458569" />
+    <state width="1324" height="387" key="GridCell.Tab.0.right" timestamp="1604309458572">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="261" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1604231563342" />
+    <state width="1324" height="387" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1604309458572" />
     <state width="1324" height="380" key="GridCell.Tab.1.bottom" timestamp="1604201672820">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -297,10 +337,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="109" y="24" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1604128292182" />
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1604230080261">
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1604232155494">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1604230080261" />
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1604232155494" />
     <state width="683" height="396" key="XDebugger.FullValuePopup" timestamp="1604116493041">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -314,10 +354,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="582" y="278" width="359" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.768@0.0.1366.768" timestamp="1603813900799" />
-    <state x="271" y="46" key="com.intellij.database.dbimport.ImportDialog" timestamp="1604225856876">
+    <state x="271" y="46" key="com.intellij.database.dbimport.ImportDialog" timestamp="1604306733419">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="271" y="46" key="com.intellij.database.dbimport.ImportDialog/0.0.1366.768@0.0.1366.768" timestamp="1604225856876" />
+    <state x="271" y="46" key="com.intellij.database.dbimport.ImportDialog/0.0.1366.768@0.0.1366.768" timestamp="1604306733419" />
     <state x="545" y="59" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1603813786417">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

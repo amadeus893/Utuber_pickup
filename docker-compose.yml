@@ -10,7 +10,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
-      - .:/code
+      - "db-data:/var/lib/postgresql/data"
     ports:
       - "5432:5432" 
   web:
@@ -26,10 +26,21 @@ services:
       - db
 
   nginx:
-      build: ./nginx
+      build: ./${NGINX_ENV}
+      env_file:
+        - ./.env
       volumes:
-        - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+        - ./${NGINX_ENV}/nginx.conf:/etc/nginx/nginx.conf
       ports:
           - '8000:8000'
       depends_on:
           - web
+
+# volumes を定義する
+volumes:
+  # volume の名前を指定
+  db-data:
+    # Compose の外ですでに作成済みの volume を指定する場合は ture を設定する。
+    # そうすると、 docker-compose up 時に Compose は volume を作成しようとしません。
+    # かつ、指定した volume が存在しないとエラーを raise します。
+    external: true
