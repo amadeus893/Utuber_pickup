@@ -17,4 +17,4 @@ RUN pip install -r requirements.txt
 # ローカルのディレクトリを/codeに追加する
 ADD UtuberPickup /code
 # entrypoint.shを実行
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/code/UtuberPickup/entrypoint.sh"]

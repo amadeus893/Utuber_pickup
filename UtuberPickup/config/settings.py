@@ -32,7 +32,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1', 'ec2-18-182-38-52.ap-northeast-1.compute.amazonaws.com']
+ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1', 'ec2-3-115-9-213.ap-northeast-1.compute.amazonaws.com']
 
 INSTALLED_APPS = [
     'apps.myrestapi.apps.MyrestapiConfig',
