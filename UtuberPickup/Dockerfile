@@ -5,16 +5,16 @@ FROM python:3.7.7
 ENV PYTHONUNBUFFERED 1
 ENV DJANGO_READ_ENV_FILE True
 # mkdirコマンドの実行
-RUN mkdir /code
+RUN mkdir /UtuberPickup
 # 作業ディレクトリの設定
-WORKDIR /code
+WORKDIR /UtuberPickup
 # requirements.txtを/codeに追加する
-ADD requirements.txt /code/
+ADD requirements.txt /UtuberPickup/
 # Pythonのパッケージ管理ツールのpipをアップグレード
 RUN pip install --upgrade pip
 # pipでrequirements.txtに指定されているパッケージを追加する
 RUN pip install -r requirements.txt
 # ローカルのディレクトリを/codeに追加する
-ADD UtuberPickup /code
+COPY UtuberPickup /UtuberPickup/
 # entrypoint.shを実行
-ENTRYPOINT ["/code/UtuberPickup/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
