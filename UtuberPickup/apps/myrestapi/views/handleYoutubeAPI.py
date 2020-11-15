@@ -1,14 +1,11 @@
 import json
 import requests
-
-from config.settings import env
-
+import config.settings as settings
 
 class handleYoutubeAPI:
     def getVideoInfoFromVideoID(videoId):
-        API_KEY = env('API_KEY1');
         options = {
-            'key': API_KEY
+            'key': settings.API_KEY1
             , 'id': videoId
             , 'part': 'id,snippet,contentDetails,statistics,liveStreamingDetails'
         }

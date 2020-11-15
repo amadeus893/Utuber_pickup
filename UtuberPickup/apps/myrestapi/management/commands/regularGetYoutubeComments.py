@@ -1,6 +1,7 @@
 import os
 
 import django
+import config.settings as settings
 import apps.myrestapi.views.handleMVtuverInformationModel as hmvi
 from django.core.management.base import BaseCommand
 from apps.myrestapi.views.getYoutubeLiveComments import getYoutubeLiveComments as gylc
@@ -8,8 +9,6 @@ from apps.myrestapi.views.evaluateLiveChat import evaluateLiveChat as evl
 from apps.myrestapi.views.handleYoutubeAPI import handleYoutubeAPI as hndlYt
 from datetime import datetime, timedelta
 from googleapiclient.discovery import build
-
-from config.settings import env
 
 
 class Command(BaseCommand):
@@ -20,10 +19,10 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         API_KEY = [
-            env('API_KEY2')
-            , env('API_KEY3')
-            , env('API_KEY4')
-            , env('API_KEY5')
+            settings.API_KEY2,
+            settings.API_KEY3,
+            settings.API_KEY4,
+            settings.API_KEY5,
         ]
         API_SERVICE_NAME = "youtube"
         API_VERSION = "v3"

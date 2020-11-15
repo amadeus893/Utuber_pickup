@@ -12,25 +12,98 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import environ
+from logging import getLogger
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ENV_FILE_DIR = environ.Path(__file__) - 3
 
-env = environ.Env()
-READ_ENV_FILE = env.bool('DJANGO_READ_ENV_FILE', default=False)
-if READ_ENV_FILE:
+# デバックモード設定
+DEBUG = os.environ['DEBUG']
+
+# logger設定
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'formatters': {
+        'django.server': {
+            '()': 'django.utils.log.ServerFormatter',
+            'format': '[%(server_time)s] %(message)s a',
+        }
+    },
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+        },
+        'django.server': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'django.server',
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler'
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'mail_admins'],
+            'level': 'INFO',
+        },
+        'django.server': {
+            'handlers': ['django.server'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'Utuberpickup.logger': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    }
+}
+
+logger = getLogger('Utuberpickup.logger')
+logger.info('DEBUG : ' + DEBUG)
+
+# 環境変数設定 ローカルではファイル読み込み
+if DEBUG:
+    env = environ.Env()
+    ENV_FILE_DIR = environ.Path(__file__) - 3
     env_file = str(ENV_FILE_DIR.path('.env'))
     env.read_env(env_file)
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+    SECRET_KEY = env('SECRET_KEY')
+    POSTGRES_DB = env('POSTGRES_DB')
+    POSTGRES_USER = env('POSTGRES_USER')
+    POSTGRES_PASSWORD = env('POSTGRES_PASSWORD')
+    HOST_OS_DATABASE_PORT = env('HOST_OS_DATABASE_PORT')
+    API_KEY1 = env('API_KEY1')
+    API_KEY2 = env('API_KEY2')
+    API_KEY3 = env('API_KEY3')
+    API_KEY4 = env('API_KEY4')
+    API_KEY5 = env('API_KEY5')
+else:
+    SECRET_KEY = os.environ['SECRET_KEY']
+    POSTGRES_DB = os.environ['POSTGRES_DB']
+    POSTGRES_USER = os.environ['POSTGRES_USER']
+    POSTGRES_PASSWORD = os.environ['POSTGRES_PASSWORD']
+    HOST_OS_DATABASE_PORT = os.environ['HOST_OS_DATABASE_PORT']
+    API_KEY1 = os.environ['API_KEY1']
+    API_KEY2 = os.environ['API_KEY2']
+    API_KEY3 = os.environ['API_KEY3']
+    API_KEY4 = os.environ['API_KEY4']
+    API_KEY5 = os.environ['API_KEY5']
 
 ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1', 'ec2-3-115-9-213.ap-northeast-1.compute.amazonaws.com']
 
@@ -82,11 +155,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('POSTGRES_DB'),
-        'USER': env('POSTGRES_USER'),
-        'PASSWORD': env('POSTGRES_PASSWORD'),
+        'NAME': POSTGRES_DB,
+        'USER': POSTGRES_USER,
+        'PASSWORD': POSTGRES_PASSWORD,
         'HOST': 'db',
-        'PORT': env('HOST_OS_DATABASE_PORT'),
+        'PORT': HOST_OS_DATABASE_PORT,
     }
 }
 
@@ -109,13 +182,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ja'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 
@@ -129,28 +201,28 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    [
-        os.path.join(BASE_DIR, "static")
-    ]
-)
+# STATICFILES_DIRS = (
+#     [
+#         os.path.join(BASE_DIR, 'static')
+#     ]
+# )
 
 #INTERNAL_IPS = [
     #'127.0.0.1',
 #    '0.0.0.0'
 #]
 
-if DEBUG:
-    def show_toolbar(request):
-        return True
-
-    INSTALLED_APPS += (
-        'debug_toolbar',
-    )
-    MIDDLEWARE += (
-        'debug_toolbar.middleware.DebugToolbarMiddleware',
-    )
-    # ここで表示する内容を設定できます↓↓基本的にはこれでok
-    DEBUG_TOOLBAR_CONFIG = {
-        'SHOW_TOOLBAR_CALLBACK': show_toolbar,
-    }
+# if DEBUG:
+#     def show_toolbar(request):
+#         return True
+#
+#     INSTALLED_APPS += (
+#         'debug_toolbar',
+#     )
+#     MIDDLEWARE += (
+#         'debug_toolbar.middleware.DebugToolbarMiddleware',
+#     )
+#     # ここで表示する内容を設定できます↓↓基本的にはこれでok
+#     DEBUG_TOOLBAR_CONFIG = {
+#         'SHOW_TOOLBAR_CALLBACK': show_toolbar,
+#     }
