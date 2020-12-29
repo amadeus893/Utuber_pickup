@@ -87,7 +87,6 @@ function csrfSafeMethod(method) {
          width: PHOTO_WIDTH,
          videoId: video_id,
          enablejsapi:1,
-         origin:'https://vtuber-livechat-analytics.tk/',
          events: {
              'onStateChange': onPlayerStateChange
          }
@@ -104,7 +103,7 @@ function onPlayerStateChange(event) {
     // 未再生のとき
     if (event.data == -1) {
         // 呼び出し元のplayerIDを取得
-        var id_name = event.target.f.id;
+        var id_name = event.target.h.id;
         // player_*からIDを取得
         var id = ('' + id_name).split('_')[1];
         var start_position = formatedTime2Seconds(video_time_list[id]['start']);

@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import json
 import requests
+import logging
 import requests_cache
 
 class getYoutubeLiveComments:
@@ -25,15 +26,15 @@ class getYoutubeLiveComments:
             #     if("live_chat_replay" in iframe["src"]):
             #         next_url = iframe["src"]
             for scrp in soup.find_all("script"):
-                if "window[\"ytInitialData\"]" in str(scrp):
-                    dict_str = str(scrp).split("[\"ytInitialData\"] = ")[1]
+                if "ytInitialData = " in str(scrp):
+                    dict_str = str(scrp).split("ytInitialData = ")[1]
 
                     # javascript表記なので更に整形. falseとtrueの表記を直す
                     dict_str = dict_str.replace("false", "False")
                     dict_str = dict_str.replace("true", "True")
 
                     # 辞書形式と認識すると簡単にデータを取得できるが, 末尾に邪魔なのがあるので消しておく（「空白2つ + \n + ;」を消す）
-                    dict_str = dict_str.split(";\n")[0]
+                    dict_str = dict_str.split(";</script>")[0]
                     dict = eval(dict_str)
                     continuation = dict['contents']['twoColumnWatchNextResults']['conversationBar']['liveChatRenderer']['continuations'][0]['reloadContinuationData']['continuation']
                     next_url = 'https://www.youtube.com/live_chat_replay?continuation=' + continuation
@@ -75,5 +76,6 @@ class getYoutubeLiveComments:
         # next_urlが入手できなくなったら終わり
         except Exception as e:
             print(e)
+            logging.info(msg="検索対象のURLが存在しないためスクレイピングを終了します。", stack_info=True)
 
         return comment_data

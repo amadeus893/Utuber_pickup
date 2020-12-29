@@ -105,7 +105,12 @@ else:
     API_KEY4 = os.environ['API_KEY4']
     API_KEY5 = os.environ['API_KEY5']
 
-ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1', 'ec2-3-115-9-213.ap-northeast-1.compute.amazonaws.com']
+ALLOWED_HOSTS = ['localhost',
+                 '0.0.0.0',
+                 '127.0.0.1',
+                 'ec2-54-248-23-107.ap-northeast-1.compute.amazonaws.com',
+                 'vtuber-livechat-analytics.tk'
+                 ]
 
 INSTALLED_APPS = [
     'apps.myrestapi.apps.MyrestapiConfig',
