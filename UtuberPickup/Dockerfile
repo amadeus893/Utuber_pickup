@@ -1,6 +1,13 @@
 # python:3.7.7をベースとします
 # latestにしてしまうと、後から構成を変更した際に勝手にバージョンが変わってしまう可能性があるので注意
 FROM python:3.7.7
+
+RUN apt-get update && apt-get install -y \
+  busybox-static \
+  && apt-get clean
+# タイムゾーン設定
+ENV TZ=Asia/Tokyo
+
 # 環境変数 PYTHONUNBUFFEREDを設定
 ENV PYTHONUNBUFFERED 1
 ENV DJANGO_READ_ENV_FILE True

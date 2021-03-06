@@ -11,7 +11,12 @@ then
     echo "PostgreSQL started"
 fi
 
+#cron setting
+busybox crond -b -L /dev/stderr
+
 #python manage.py flush --no-input
 python manage.py migrate
 
 exec "$@"
+
+

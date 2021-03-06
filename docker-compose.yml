@@ -17,6 +17,9 @@ services:
     build:
       context: ./
       dockerfile: ./UtuberPickup/Dockerfile
+    volumes:
+      - ./UtuberPickup/cron.d/crontab:/var/spool/cron/crontabs/root
+      - ./UtuberPickup/cron.d/regularGetYoutubeComments.sh:/var/spool/cron/crontabs/regularGetYoutubeComments.sh
     env_file:
       - ./.env
     environment:
@@ -38,6 +41,13 @@ services:
           - '8080:80'
       depends_on:
           - web
+
+#  busybox:
+#    build: ./UtuberPickup/cron.d/
+#    volumes:
+#      - ./UtuberPickup/cron.d/crontab:/var/spool/cron/crontabs/root
+#    depends_on:
+#      - web
 
 # volumes を定義する
 volumes:

@@ -43,7 +43,8 @@ class getYoutubeLiveComments:
             while(1):
                 #取得したURL
                 count += 1
-                print(str(count) + '回目:' + next_url)
+                print(str(count) + '回目:')
+                print(next_url)
 
                 response = session.get(next_url, headers=headers)
                 html = response.content.decode(response.encoding)
@@ -55,13 +56,16 @@ class getYoutubeLiveComments:
                 for scrp in soup.find_all("script"):
                     if "window[\"ytInitialData\"]" in str(scrp):
                         dict_str = str(scrp).split("[\"ytInitialData\"] = ")[1]
+                        break
 
                 # javascript表記なので更に整形. falseとtrueの表記を直す
                 dict_str = dict_str.replace("false", "False")
                 dict_str = dict_str.replace("true", "True")
 
-                # 辞書形式と認識すると簡単にデータを取得できるが, 末尾に邪魔なのがあるので消しておく（「空白2つ + \n + ;」を消す）
+                # 辞書形式と認識すると簡単にデータを取得できるが, 末尾に邪魔なのがあるので消しておく
                 dict_str = dict_str.split(";\n")[0]
+                # 改行なしのパターンに対応
+                dict_str = dict_str.split(";</script>")[0]
 
                 # 辞書形式に変換
                 dics = eval(dict_str)
