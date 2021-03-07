@@ -108,6 +108,7 @@ else:
 ALLOWED_HOSTS = ['localhost',
                  '0.0.0.0',
                  '127.0.0.1',
+                 '54.248.23.107',
                  'ec2-54-248-23-107.ap-northeast-1.compute.amazonaws.com',
                  'vtuber-livechat-analytics.tk'
                  ]
