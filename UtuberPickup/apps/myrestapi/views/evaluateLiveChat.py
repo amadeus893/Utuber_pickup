@@ -1,3 +1,5 @@
+import math
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import re
@@ -84,23 +86,48 @@ class evaluateLiveChat:
                                     time_text['text'] = str(dict_runs['text'])
                                     dict_time_text.append(time_text)
 
-            # 10秒ごとのコメント総数を集計
+            # コメントを時間でソート
             df = pd.DataFrame(dict_time_text)
+            df['time'] = pd.to_datetime(df['time'])
             df = df.sort_values(by='time', ascending=True)
 
             # コメントの開始・終了時間を保持
             start_limit_time = datetime.datetime(1900, 1, 1, 0, 0, 0)
             end_limit_time = df.tail(1).values[0][0]
 
-            df.index = df['time'] # 時間をインデックスに指定
+            # 時間をインデックスに指定
+            df.index = df['time']
             df['count'] = 1
-            df = df.resample('10S').sum()
 
-            # # グラフで盛り上がりを可視化
-            # df.plot()
-            # plt.show()
+            # 10分以下の動画は除外
+            videoMin = (abs(end_limit_time - start_limit_time)).seconds / 60
+            if videoMin < 10:
+                return None, None
+            # 開始終了3分以内は除外
+            fIndexNames = df[df['time'] <= (start_limit_time + datetime.timedelta(minutes=3))].index
+            eIndexNames = df[df['time'] >= (end_limit_time - datetime.timedelta(minutes=3))].index
+            df.drop(fIndexNames, inplace=True)
+            df.drop(eIndexNames, inplace=True)
 
-            # コメント数が多い順に、上位10位を抽出
+            # 10分割してグループ化
+            limit = datetime.timedelta(minutes=int((videoMin - 6) / 10))
+            df['GroupID'] = (abs(df.index - start_limit_time) / limit).astype(int)
+            grouped_df = df.groupby('GroupID')
+
+            # グループ単位で上位1位を抽出
+            df = pd.DataFrame()
+            for id, sub_df in grouped_df:
+                sub_df = pd.DataFrame(sub_df)
+                sub_df.index = sub_df['time']
+                sub_df = sub_df.resample('10S').sum()
+                sub_df = sub_df.sort_values(by='count', ascending=False).head(1)
+                df = pd.concat([df, sub_df])
+
+            # グラフで盛り上がりを可視化
+            df.plot()
+            plt.show()
+
+            # グループ結合後にコメント数が多い順に、上位10位を抽出
             df = df.sort_values(by='count', ascending=False).head(10)
 
             # 動画の開始、終了時刻を返却
@@ -127,6 +154,7 @@ class evaluateLiveChat:
 
         except Exception as e:
             print(e)
+            e.with_traceback()
             result = None
             moderator_chat_list = None
             return result, moderator_chat_list

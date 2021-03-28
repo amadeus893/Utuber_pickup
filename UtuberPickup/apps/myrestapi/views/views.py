@@ -42,11 +42,12 @@ def execute(request):
                 comment_data = gylc.getYoutubeLiveComments(video_id)
                 if len(comment_data) is not 0:
                     time_list, moderator_chat_list = evl.evaluateLiveChat(comment_data)
-                    video_info = hndlYt.getVideoInfoFromVideoID(video_id)
-                    channelId = video_info['items'][0]['snippet']['channelId']
-                    # published_at = video_info['items'][0]['snippet']['publishedAt']
-                    published_at = video_info['items'][0]['liveStreamingDetails']['actualEndTime']
-                    hccm.insertChatCacheData(video_id, channelId, published_at, time_list, moderator_chat_list)
+                    if result is not None:
+                        video_info = hndlYt.getVideoInfoFromVideoID(video_id)
+                        channelId = video_info['items'][0]['snippet']['channelId']
+                        # published_at = video_info['items'][0]['snippet']['publishedAt']
+                        published_at = video_info['items'][0]['liveStreamingDetails']['actualEndTime']
+                        hccm.insertChatCacheData(video_id, channelId, published_at, time_list, moderator_chat_list)
             else:
                 time_list, moderator_chat_list = hccm.getChatCacheData(video_id)
 
