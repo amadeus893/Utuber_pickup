@@ -213,17 +213,15 @@ function initDisplay(){
                 // 氏名フィルターをかけていない場合
                 displayPhotoFrames(1);
                 for (var id = 0; id < data.length; id++) {
-                    let time_list = JSON.parse(data[id]['time_list']);
-                    video_time_list.push(time_list[0]);
+                    video_time_list.push(data[id]['time_list'][0]);
                     embedVideo(id, data[id]['video_id']);
                 }
             } else {
                 // 氏名フィルターをかけている場合
                 displayPhotoFrames(data.length == 0 ? 1 : data.length); // 1件もない場合は額縁だけ作る。
                 for (var id = 0; id < data.length; id++) {
-                    let time_list = JSON.parse(data[id]['time_list']);
-                    for (var timeId = 0; timeId < Object.keys(time_list).length; timeId++) {
-                        video_time_list.push(time_list[timeId]);
+                    for (var timeId = 0; timeId < Object.keys(data[id]['time_list']).length; timeId++) {
+                        video_time_list.push(data[id]['time_list'][timeId]);
                         embedVideo(timeId + (id * 10), data[id]['video_id']);
                     }
                 }

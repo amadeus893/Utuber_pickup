@@ -17,9 +17,9 @@ services:
     build:
       context: ./
       dockerfile: ./UtuberPickup/Dockerfile
-    volumes:
-      - ./UtuberPickup/cron.d/crontab:/var/spool/cron/crontabs/root
-      - ./UtuberPickup/cron.d/regularGetYoutubeComments.sh:/var/spool/cron/crontabs/regularGetYoutubeComments.sh
+#    volumes:
+#      - ./UtuberPickup/cron.d/crontab:/var/spool/cron/crontabs/root
+#      - ./UtuberPickup/cron.d/regularGetYoutubeComments.sh:/var/spool/cron/crontabs/regularGetYoutubeComments.sh
     env_file:
       - ./.env
     environment:

@@ -5,6 +5,7 @@ FROM python:3.7.7
 RUN apt-get update && apt-get install -y \
   busybox-static \
   && apt-get clean
+RUN apt-get update && apt-get -y install vim
 # タイムゾーン設定
 ENV TZ=Asia/Tokyo
 
@@ -23,5 +24,11 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 # ローカルのディレクトリを/codeに追加する
 COPY UtuberPickup /UtuberPickup/
+
+RUN mkdir /var/spool/cron/
+RUN mkdir /var/spool/cron/crontabs
+COPY UtuberPickup/cron.d/crontab /var/spool/cron/crontabs/root
+COPY UtuberPickup/cron.d/regularGetYoutubeComments.sh /var/spool/cron/crontabs/regularGetYoutubeComments.sh
+
 # entrypoint.shを実行
 ENTRYPOINT ["./entrypoint.sh"]

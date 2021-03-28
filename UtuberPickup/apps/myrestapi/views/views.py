@@ -59,7 +59,7 @@ def execute(request):
         return HttpResponse(json.dumps(dict_responce), content_type='application/json')
 
     except Exception as e:
-        print(e)
+        e.with_traceback()
         logging.exception(e)
 
 
@@ -97,13 +97,12 @@ def getVtuberPhotoFrames(request):
 
             elif request.POST['func'] == 'getVtuberList':
 
-                # マスタから全Vtuber氏名取得
+                # マスタから全ての氏名取得
                 result = list((hmvi.getMVtuberInformationModel()).values('channel_id', 'vtuber_name'))
 
             return HttpResponse(json.dumps(result), content_type='application/json')
 
     except Exception as e:
-        print(e)
         logging.exception(e)
 
 

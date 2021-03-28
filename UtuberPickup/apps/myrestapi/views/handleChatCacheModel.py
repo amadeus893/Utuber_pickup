@@ -34,19 +34,23 @@ def getChatCacheData(video_id):
 # @database_sync_to_async
 def getRankData(start_date, end_date, channel_id):
 
-    if channel_id != 'NoFilter':
-        models = list(ChatCacheModel.objects
-                      .filter(published_at__range=(start_date, end_date))
-                      .filter(channel_id=channel_id)
-                      .values('video_id', 'time_list'))
-    else:
-        models = list(ChatCacheModel.objects
-                      .filter(published_at__range=(start_date, end_date))
-                      .values('video_id', 'time_list'))
+    try:
+        if channel_id != 'NoFilter':
+            models = list(ChatCacheModel.objects
+                          .filter(published_at__range=(start_date, end_date))
+                          .filter(channel_id=channel_id)
+                          .values('video_id', 'time_list'))
+        else:
+            models = list(ChatCacheModel.objects
+                          .filter(published_at__range=(start_date, end_date))
+                          .values('video_id', 'time_list'))
 
-    models.sort(key=lambda x: int(eval(x['time_list'])['0']['commentCnt']), reverse=True)
-    # 取得する動画は最大コメント数の多い順10件
-    return models[:10]
+        models.sort(key=lambda x: int(x['time_list']['0']['commentCnt']), reverse=True)
+        # 取得する動画は最大コメント数の多い順10件
+        return models[:10]
+    except Exception as e:
+        print(e)
+        e.with_traceback()
 
 
 # @database_sync_to_async

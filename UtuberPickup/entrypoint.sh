@@ -15,6 +15,9 @@ fi
 busybox crond -b -L /dev/stderr
 
 #python manage.py flush --no-input
+#python manage.py migrate --fake myrestapi zero
+#python manage.py makemigrations
+#python manage.py migrate --fake-initial
 python manage.py migrate
 
 exec "$@"

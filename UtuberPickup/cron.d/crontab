@@ -2,7 +2,7 @@
 # | | | | .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
 # | | | | |
 # * * * * * user-name command to be executed
-  0 0 * * *  root . /var/spool/cron/crontabs/regularGetYoutubeComments.sh 0 >> /var/log/cron.log 2>> /var/log/cron-err.log
-  0 6 * * *  root . /var/spool/cron/crontabs/regularGetYoutubeComments.sh 1 >> /var/log/cron.log 2>> /var/log/cron-err.log
-  0 12 * * *  root . /var/spool/cron/crontabs/regularGetYoutubeComments.sh 2 >> /var/log/cron.log 2>> /var/log/cron-err.log
-  0 18 * * *  root . /var/spool/cron/crontabs/regularGetYoutubeComments.sh 3 >> /var/log/cron.log 2>> /var/log/cron-err.log
+0 0 * * *  . /var/spool/cron/crontabs/regularGetYoutubeComments.sh 0 >> /var/log/cron.log 2>> /var/log/cron-err.log
+0 6 * * *  . /var/spool/cron/crontabs/regularGetYoutubeComments.sh 1 >> /var/log/cron.log 2>> /var/log/cron-err.log
+0 12 * * *  . /var/spool/cron/crontabs/regularGetYoutubeComments.sh 2 >> /var/log/cron.log 2>> /var/log/cron-err.log
+0 18 * * *  . /var/spool/cron/crontabs/regularGetYoutubeComments.sh 3 >> /var/log/cron.log 2>> /var/log/cron-err.log
