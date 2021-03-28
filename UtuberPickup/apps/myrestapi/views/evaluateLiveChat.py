@@ -124,8 +124,8 @@ class evaluateLiveChat:
                 df = pd.concat([df, sub_df])
 
             # グラフで盛り上がりを可視化
-            df.plot()
-            plt.show()
+            # df.plot()
+            # plt.show()
 
             # グループ結合後にコメント数が多い順に、上位10位を抽出
             df = df.sort_values(by='count', ascending=False).head(10)
