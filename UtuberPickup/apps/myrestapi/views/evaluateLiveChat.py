@@ -86,6 +86,10 @@ class evaluateLiveChat:
                                     time_text['text'] = str(dict_runs['text'])
                                     dict_time_text.append(time_text)
 
+            # コメントを取得できなかった場合は処理終了
+            if len(dict_time_text) == 0:
+                return None, None
+
             # コメントを時間でソート
             df = pd.DataFrame(dict_time_text)
             df['time'] = pd.to_datetime(df['time'])
