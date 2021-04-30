@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import re
 import datetime
 from datetime import datetime as dt
+import apps.myrestapi.views.extractFeatureWords as extFW
+from apps.myrestapi.views.util import *
 
 class evaluateLiveChat:
     def evaluateLiveChat(comment_data):
@@ -94,6 +96,7 @@ class evaluateLiveChat:
             df = pd.DataFrame(dict_time_text)
             df['time'] = pd.to_datetime(df['time'])
             df = df.sort_values(by='time', ascending=True)
+            dfOrgn = df
 
             # コメントの開始・終了時間を保持
             start_limit_time = datetime.datetime(1900, 1, 1, 0, 0, 0)
@@ -151,6 +154,17 @@ class evaluateLiveChat:
                 timeDict['start'] = str(start_time).split(' ')[1]
                 timeDict['end'] = str(end_time).split(' ')[1]
                 timeDict['commentCnt'] = int(row['count'])
+
+                # 開始〜終了時間までのコメントデータ取得
+                dfTerm = dfOrgn[((dfOrgn['time'] >= datetime.datetime.strptime(str(start_time), '%Y-%m-%d %H:%M:%S'))
+                                 & (dfOrgn['time'] <= datetime.datetime.strptime(str(end_time), '%Y-%m-%d %H:%M:%S')))]
+
+                # この期間の重要単語を取得
+                docList = getDocList(dfTerm)
+                wdList = getWdList(dfTerm)
+                timeDict['tags'] = extFW.extractFeatureWords(docList, wdList)
+
+                # 結果リストに格納
                 result[str(count)] = timeDict
                 count += 1
 

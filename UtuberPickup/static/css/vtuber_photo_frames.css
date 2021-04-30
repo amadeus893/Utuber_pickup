@@ -102,7 +102,7 @@ nav {
     background-repeat: no-repeat;
     background-size:cover;
     position: absolute;
-    top: 45px;
+    top: 25px;
     left: 170px;
     height:50px;
     width:50px;
@@ -113,6 +113,23 @@ nav {
     color: black;
     font-weight: bold;
     font-size: 2.5em;
+    white-space: nowrap;
+}
+.tag{
+    position: absolute;
+    top: 75px;
+    left: 110px;
+    height:40px;
+    width:530px;
+}
+.tag li{
+    display: inline;
+    position: relative;
+    margin-right: 10px;
+}
+.lbl-tag {
+    color: black;
+    font-size: 1.2em;
     white-space: nowrap;
 }
 .photo {

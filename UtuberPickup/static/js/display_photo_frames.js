@@ -5,6 +5,7 @@ const PHOTO_FRAME_HEIGHT = 500;
 const PHOTO_FRAME_WIDTH = 700;
 const PHOTO_HEIGHT = 350;
 const PHOTO_WIDTH = 600;
+const TAG_MAX_NUMBER = 5;
 
 // グローバル変数
 var playerList=[];
@@ -98,6 +99,19 @@ function csrfSafeMethod(method) {
      $('#lbl-time-' + id).text(video_time_list[id]['start'] + '〜' + video_time_list[id]['end'] )
 }
 
+/* ------------------------------
+ タグ埋め込み処理
+ ------------------------------ */
+function embedTags(id) {
+
+    for (let i = 0; i < TAG_MAX_NUMBER; i++) {
+        if ('tags' in video_time_list[id]) {
+            $('#lbl-tag-' + id + '-' + i).text('#' + video_time_list[id]['tags'][i])
+        }
+    }
+
+}
+
 // 埋め込み動画のステータスが変わった時の処理
 function onPlayerStateChange(event) {
     // 未再生のとき
@@ -159,7 +173,14 @@ function displayPhotoFrames(slide_num){
             page += '<li><div class="photo-frame">'
                 + '<img src="../../static/img/gray_background.jpeg" height ="' + PHOTO_FRAME_HEIGHT + 'px" width="' + PHOTO_FRAME_WIDTH + 'px" >'
                 + '<div class="rank"><p class="rank-num">No.' + (id + 1) + '</p></div>'
-                + '<div class="time"><label class="lbl-time" id="lbl-time-' + photo_num + '"></label></div>'
+                + '<div class="time"><label class="lbl-time" id="lbl-time-' + photo_num + '"></label></div>';
+
+            // Tagのフレームを作成
+            page += '<ul class="tag">'
+            for(var i = 0; i < TAG_MAX_NUMBER; i++) {
+                page +=  '<li><label class="lbl-tag" id="lbl-tag-' + photo_num + '-' + i  + '"></label></li>';
+            }
+            page += '</ul>'
                 + '<div class="photo" id="photo_' + photo_num + '" style="position: absolute; "></div>'
                 + '</div></li></ul>';
         }
@@ -215,6 +236,7 @@ function initDisplay(){
                 for (var id = 0; id < data.length; id++) {
                     video_time_list.push(data[id]['time_list'][0]);
                     embedVideo(id, data[id]['video_id']);
+                    embedTags(id);
                 }
             } else {
                 // 氏名フィルターをかけている場合
@@ -223,6 +245,7 @@ function initDisplay(){
                     for (var timeId = 0; timeId < Object.keys(data[id]['time_list']).length; timeId++) {
                         video_time_list.push(data[id]['time_list'][timeId]);
                         embedVideo(timeId + (id * 10), data[id]['video_id']);
+                        embedTags(timeId + (id * 10));
                     }
                 }
             }

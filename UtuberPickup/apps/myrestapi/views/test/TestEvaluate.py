@@ -2,7 +2,7 @@ import logging
 from apps.myrestapi.views.getYoutubeLiveComments import getYoutubeLiveComments as gylc
 from apps.myrestapi.views.evaluateLiveChat import evaluateLiveChat as evl
 
-video_id = 'ADsvz5W2C9E'
+video_id = 'Zy5hcDmhaoc'
 
 def createTestData():
     try:
